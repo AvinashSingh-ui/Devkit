@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="DevKit - Simple TypeScript utility tools with instant copy code snippets.">
+    <title>DevKit | TypeScript Developer Utilities</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="header">
+        <nav class="navbar container" aria-label="Main navigation">
+            <a href="#" class="logo">Dev<span>Kit.</span></a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#snippets">Code Library</a></li>
+                <li><a href="#playground">Playground</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero container" id="home">
+            <p class="eyebrow">YOUR DEVELOPER TOOLKIT</p>
+            <h1>Production ready TS snippets.<br><span>One-click copy.</span></h1>
+            <p class="hero-text">
+                A modern collection of lightweight, type-safe TypeScript utilities. Copy snippets directly into your projects or try them live.
+            </p>
+            <div class="hero-actions">
+                <a href="#snippets" class="btn btn-primary">Browse Library &rarr;</a>
+                <a href="#playground" class="btn btn-secondary">Try Playground</a>
+            </div>
+        </section>
+
+        <section class="snippets container" id="snippets">
+            <div class="section-heading">
+                <p class="eyebrow">READY TO USE</p>
+                <h2>Utility Code Library</h2>
+                <p>Explore reusable TypeScript functions for your projects.</p>
+            </div>
+
+            <div class="snippet-grid">
+                <article class="snippet-card">
+                    <div class="snippet-header">
+                        <div class="snippet-title">
+                            <span class="badge">String</span>
+                            <h3>Capitalize String</h3>
+                        </div>
+                        <button class="copy-btn copy-badge" data-target="code-capitalize" title="Copy code snippet" aria-label="Copy Capitalize String snippet">
+                            <svg class="copy-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                            <span>Copy</span>
+                        </button>
+                    </div>
+                    <p class="snippet-desc">Capitalizes the first character of a string.</p>
+                    <div class="code-container">
+                        <pre><code id="code-capitalize"><span class="k">export</span> <span class="k">const</span> <span class="f">capitalize</span> = (str: <span class="t">string</span>): <span class="t">string</span> => {
+  <span class="k">if</span> (!str) <span class="k">return</span> <span class="s">""</span>;
+  <span class="k">return</span> str.charAt(<span class="n">0</span>).toUpperCase() + str.slice(<span class="n">1</span>);
+};</code></pre>
+                    </div>
+                </article>
+
+                <article class="snippet-card">
+                    <div class="snippet-header">
+                        <div class="snippet-title">
+                            <span class="badge">String</span>
+                            <h3>Reverse String</h3>
+                        </div>
+                        <button class="copy-btn copy-badge" data-target="code-reverse" title="Copy code snippet" aria-label="Copy Reverse String snippet">
+                            <svg class="copy-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                            <span>Copy</span>
+                        </button>
+                    </div>
+                    <p class="snippet-desc">Reverses a string while supporting Unicode characters.</p>
+                    <div class="code-container">
+                        <pre><code id="code-reverse"><span class="k">export</span> <span class="k">const</span> <span class="f">reverseString</span> = (str: <span class="t">string</span>): <span class="t">string</span> => {
+  <span class="k">return</span> Array.from(str).reverse().join(<span class="s">""</span>);
+};</code></pre>
+                    </div>
+                </article>
+
+                <article class="snippet-card">
+                    <div class="snippet-header">
+                        <div class="snippet-title">
+                            <span class="badge badge-number">Number</span>
+                            <h3>Calculate Average</h3>
+                        </div>
+                        <button class="copy-btn copy-badge" data-target="code-average" title="Copy code snippet" aria-label="Copy Calculate Average snippet">
+                            <svg class="copy-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                            <span>Copy</span>
+                        </button>
+                    </div>
+                    <p class="snippet-desc">Calculates the mean of a numeric array.</p>
+                    <div class="code-container">
+                        <pre><code id="code-average"><span class="k">export</span> <span class="k">const</span> <span class="f">average</span> = (numbers: <span class="t">number[]</span>): <span class="t">number</span> => {
+  <span class="k">if</span> (!numbers.length) <span class="k">return</span> <span class="n">0</span>;
+  <span class="k">const</span> sum = numbers.reduce((acc, val) => acc + val, <span class="n">0</span>);
+  <span class="k">return</span> sum / numbers.length;
+};</code></pre>
+                    </div>
+                </article>
+
+                <article class="snippet-card">
+                    <div class="snippet-header">
+                        <div class="snippet-title">
+                            <span class="badge badge-array">Array</span>
+                            <h3>Unique Elements</h3>
+                        </div>
+                        <button class="copy-btn copy-badge" data-target="code-unique" title="Copy code snippet" aria-label="Copy Unique Elements snippet">
+                            <svg class="copy-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                            <span>Copy</span>
+                        </button>
+                    </div>
+                    <p class="snippet-desc">Removes duplicate values while preserving their order.</p>
+                    <div class="code-container">
+                        <pre><code id="code-unique"><span class="k">export</span> <span class="k">const</span> <span class="f">removeDuplicates</span> = &lt;<span class="t">T</span>&gt;(arr: <span class="t">T[]</span>): <span class="t">T[]</span> => {
+  <span class="k">return</span> Array.from(<span class="k">new</span> Set(arr));
+};</code></pre>
+                    </div>
+                </article>
+
+                <article class="snippet-card">
+                    <div class="snippet-header">
+                        <div class="snippet-title">
+                            <span class="badge badge-guard">Type Guard</span>
+                            <h3>Is Object Check</h3>
+                        </div>
+                        <button class="copy-btn copy-badge" data-target="code-isobject" title="Copy code snippet" aria-label="Copy Is Object Check snippet">
+                            <svg class="copy-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                            <span>Copy</span>
+                        </button>
+                    </div>
+                    <p class="snippet-desc">Checks whether an unknown value is a non-null object.</p>
+                    <div class="code-container">
+                        <pre><code id="code-isobject"><span class="k">export</span> <span class="k">const</span> <span class="f">isObject</span> = (val: <span class="t">unknown</span>): val <span class="k">is</span> <span class="t">Record&lt;string, unknown&gt;</span> => {
+  <span class="k">return</span> typeof val === <span class="s">"object"</span> && val !== <span class="k">null</span> && !Array.isArray(val);
+};</code></pre>
+                    </div>
+                </article>
+
+                <article class="snippet-card">
+                    <div class="snippet-header">
+                        <div class="snippet-title">
+                            <span class="badge badge-array">Array</span>
+                            <h3>Chunk Array</h3>
+                        </div>
+                        <button class="copy-btn copy-badge" data-target="code-chunk" title="Copy code snippet" aria-label="Copy Chunk Array snippet">
+                            <svg class="copy-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                            <span>Copy</span>
+                        </button>
+                    </div>
+                    <p class="snippet-desc">Splits an array into smaller arrays of a given size.</p>
+                    <div class="code-container">
+                        <pre><code id="code-chunk"><span class="k">export</span> <span class="k">const</span> <span class="f">chunk</span> = &lt;<span class="t">T</span>&gt;(arr: <span class="t">T[]</span>, size: <span class="t">number</span>): <span class="t">T[][]</span> => {
+  <span class="k">return</span> Array.from({ length: Math.ceil(arr.length / size) }, (_, i) =>
+    arr.slice(i * size, i * size + size)
+  );
+};</code></pre>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="playground container" id="playground">
+            <div class="section-heading">
+                <p class="eyebrow">LIVE INTERACTION</p>
+                <h2>Utility Playground</h2>
+                <p>Try the utilities with your own input.</p>
+            </div>
+
+            <div class="playground-layout">
+                <form class="playground-box" id="playgroundForm">
+                    <div class="form-group">
+                        <label for="toolSelect">Choose Utility</label>
+                        <select id="toolSelect">
+                            <option value="capitalize">Capitalize String</option>
+                            <option value="reverse">Reverse String</option>
+                            <option value="average">Calculate Average</option>
+                            <option value="unique">Remove Duplicates</option>
+                            <option value="isObject">Check isObject</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="toolInput">Input Value</label>
+                        <input type="text" id="toolInput" value="hello devkit world" placeholder="Type something...">
+                        <span class="input-hint" id="inputHint">Enter text string to capitalize</span>
+                    </div>
+
+                    <button type="button" class="btn btn-primary" id="runBtn">
+                        Run Utility &rarr;
+                    </button>
+
+                    <div class="output-box" aria-live="polite">
+                        <div class="output-header">
+                            <span>OUTPUT</span>
+                            <button type="button" id="copyOutputBtn" class="copy-btn copy-badge" title="Copy output result" aria-label="Copy output result">
+                                <svg class="copy-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                                <span>Copy</span>
+                            </button>
+                        </div>
+                        <p id="toolOutput">Your result will appear here.</p>
+                    </div>
+                </form>
+
+                <div class="playground-code-preview">
+                    <div class="preview-header">
+                        <span>Active Source Snippet</span>
+                        <button type="button" id="copyActiveSnippetBtn" class="copy-btn copy-badge" title="Copy active code snippet" aria-label="Copy active source snippet">
+                            <svg class="copy-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                            <span>Copy</span>
+                        </button>
+                    </div>
+                    <pre><code id="activeSnippetCode">export const capitalize = (str: string): string => {
+  if (!str) return "";
+  return str.charAt(0).toUpperCase() + str.slice(1);
+};</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <section class="about container" id="about">
+            <p class="eyebrow">ABOUT DEVKIT</p>
+            <h2>Built for modern TypeScript workflows.</h2>
+            <p>
+                DevKit is a lightweight developer utility library featuring reusable,
+                type-safe functions for everyday development.
+            </p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 DevKit · Built by Avinash</p>
+    </footer>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+    <script type="module" src="./dist/main.js"></script>
+
+</body>
+</html>
